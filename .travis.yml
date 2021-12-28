@@ -24,9 +24,6 @@ script:
   - ansible-lint
   - "ansible-playbook tests/test.yml -i tests/inventory --connection=local"
   - "ansible-playbook tests/test.yml -i tests/inventory --connection=local"
-  - ls -lh /etc/apt/sources.list.d/
-  - cat /etc/apt/sources.list.d/pgdg.list
-  - cat /etc/apt/sources.list.d/repo_mongodb_org_apt_ubuntu.list
   - mongod --version
 
 notifications:

@@ -7,9 +7,13 @@
     state: present
   become: yes
 
+- ansible.builtin.set_fact:
+    mongodb_distribution_component: multiverse
+  when: ansible_distribution == 'Ubuntu'
+
 - name: add apt-repo
   apt_repository:
-    repo: deb http://repo.mongodb.org/apt/{{ ansible_distribution | lower }} {{ mongodb_distribution_release }}/mongodb-org/{{ mongodb_version }} main
+    repo: deb http://repo.mongodb.org/apt/{{ ansible_distribution | lower }} {{ mongodb_distribution_release }}/mongodb-org/{{ mongodb_version }} {{ mongodb_distribution_component }}
     state: present
   become: yes
 
