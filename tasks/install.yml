@@ -2,7 +2,7 @@
 
 - name: add apt-key
   apt_key:
-    id: "{{ mongodb_gpg_key_ids['{{ mongodb_version }}'] }}"
+    id: "{{ mongodb_gpg_key_ids[mongodb_version] }}"
     url: https://www.mongodb.org/static/pgp/server-{{ mongodb_version }}.asc
     state: present
   become: yes
