@@ -7,7 +7,8 @@
     state: present
   become: yes
 
-- ansible.builtin.set_fact:
+- name: set apt component for ubuntu
+  ansible.builtin.set_fact:
     mongodb_distribution_component: multiverse
   when: ansible_distribution == 'Ubuntu'
 
