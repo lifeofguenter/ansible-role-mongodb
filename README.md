@@ -14,7 +14,7 @@ none
 Available variables are listed below, along with default values:
 
 ```yaml
-mongodb_version: 5.0
+mongodb_version: '5.0'
 ```
 
 ## Dependencies
