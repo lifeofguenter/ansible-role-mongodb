@@ -1,4 +1,4 @@
-# ansible-role-mongodb
+# lifeofguenter.mongodb
 
 [![Build Status](https://travis-ci.com/lifeofguenter/ansible-role-mongodb.svg?branch=main)](https://travis-ci.com/lifeofguenter/ansible-role-mongodb)
 
@@ -15,8 +15,6 @@ Available variables are listed below, along with default values:
 
 ```yaml
 mongodb_version: 5.0
-
-mongodb_distribution_release: "{{ ansible_distribution_release }}"
 ```
 
 ## Dependencies

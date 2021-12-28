@@ -3,7 +3,7 @@
 galaxy_info:
   role_name: mongodb
   namespace: lifeofguenter
-  author: Gunter Grodotzki
+  author: Günter Grodotzki
   description: Installs and configures mongodb on Debian-like systems.
   license: MIT
   min_ansible_version: '2.10'
