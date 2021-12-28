@@ -1,0 +1,22 @@
+---
+
+- name: add apt-key
+  apt_key:
+    id: F5679A222C647C87527C2F8CB00A0BD1E2C63C11
+    url: https://www.mongodb.org/static/pgp/server-5.0.asc
+    state: present
+  become: yes
+
+- name: add apt-repo
+  apt_repository:
+    repo: deb http://repo.mongodb.org/apt/{{ ansible_distribution | lower }} {{ mongodb_distribution_release }}/mongodb-org/{{ mongodb_version }} main
+    state: present
+  become: yes
+
+- name: install mongodb
+  apt:
+    name: mongodb-org
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+  become: yes

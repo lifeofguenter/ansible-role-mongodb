@@ -1,0 +1,5 @@
+---
+
+mongodb_version: 5.0
+
+mongodb_distribution_release: "{{ ansible_distribution_release }}"
