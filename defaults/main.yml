@@ -1,0 +1,8 @@
+---
+
+mongodb_version: 5.0
+
+mongodb_distribution_release: "{{ ansible_distribution_release }}"
+
+# https://github.com/ansible/ansible/issues/22025
+mongodb_apt_component: main

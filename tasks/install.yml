@@ -1,0 +1,29 @@
+---
+
+- name: add apt-key
+  apt_key:
+    id: "{{ mongodb_gpg_key_ids[mongodb_version] }}"
+    url: https://www.mongodb.org/static/pgp/server-{{ mongodb_version }}.asc
+    state: present
+  become: yes
+
+- name: set apt component for ubuntu
+  ansible.builtin.set_fact:
+    mongodb_apt_component: multiverse
+  when: ansible_distribution == 'Ubuntu'
+
+- name: add apt-repo
+  apt_repository:
+    repo: deb http://repo.mongodb.org/apt/{{ ansible_distribution | lower }} {{ mongodb_apt_suite }} {{ mongodb_apt_component }}
+    state: present
+  become: yes
+
+- name: install mongodb
+  apt:
+    name:
+      - mongodb-org-server
+      - mongodb-org-tools
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+  become: yes

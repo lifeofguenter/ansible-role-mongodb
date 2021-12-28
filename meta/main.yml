@@ -1,0 +1,23 @@
+---
+
+galaxy_info:
+  role_name: mongodb
+  namespace: lifeofguenter
+  author: Gunter Grodotzki
+  description: Installs and configures mongodb on Debian-like systems.
+  license: MIT
+  min_ansible_version: '2.10'
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+        - bionic
+        - xenial
+    - name: Debian
+      versions:
+        - bullseye
+        - buster
+        - stretch
+  galaxy_tags:
+    - database
+dependencies: []
