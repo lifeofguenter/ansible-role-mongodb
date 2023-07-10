@@ -1,7 +1,5 @@
 # lifeofguenter.mongodb
 
-[![Build Status](https://travis-ci.com/lifeofguenter/ansible-role-mongodb.svg?branch=main)](https://travis-ci.com/lifeofguenter/ansible-role-mongodb)
-
 An Ansible role that installs and configures the community edition of MongoDB on
 Debian-like systems.
 
